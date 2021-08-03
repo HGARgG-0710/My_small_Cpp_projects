@@ -19,14 +19,14 @@ int main()
     std::cout << fibonacci(num);
 }
 
-int fibonacci(int number)
+int fibonacci(const unsigned int index)
 {
-    int remembered[number + 1] = {0, 1};
+    int remembered[index + 1] = {0, 1};
 
-    for (int i = 2; i < number + 1; i++)
+    for (int i = 2; i < index + 1; i++)
         remembered[i] = remembered[i - 1] + remembered[i - 2];
 
-    return remembered[number];
+    return remembered[index];
 }
 
 void inputInt(int *num, const char *message)
